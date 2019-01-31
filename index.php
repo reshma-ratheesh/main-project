@@ -43,7 +43,7 @@ function getCity(val) {
 </script>
 </head>
 <body>
-<form action="view.php" method="post">
+<form action="#" method="post">
 <div class="frmDronpDown">
 <div class="row">
 <label>Name:</label> 
@@ -93,6 +93,6 @@ if(isset($_POST['submit']))
 	$query=mysqli_query($con,"SELECT `id` FROM `district` WHERE name='$d'");
 	$did=mysqli_insert_id($con);*/
 	mysqli_query($con,"INSERT INTO `user`(`name`, `countryID`, `stateID`, `id`) VALUES ('$n','$c','$s','$d')");
-	
+	header("location:view.php");
 }
 ?>
